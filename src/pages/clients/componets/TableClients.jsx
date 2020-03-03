@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import ClientsLi from './ClientsLi'
-import NavPage from '../../../componets/NavPage'
+import LiClients from './LiClients'
+import ScrollPage from '../../../componets/ScrollPage'
 
 export default class TableClients extends Component{
     render() {
@@ -27,7 +27,7 @@ export default class TableClients extends Component{
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -39,7 +39,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -51,7 +51,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -63,7 +63,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -75,7 +75,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -87,7 +87,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -99,7 +99,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -111,7 +111,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -123,7 +123,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -135,7 +135,7 @@ export default class TableClients extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <ClientsLi 
+                                            <LiClients 
                                                 date="18/02/2020"
                                                 document="034.114.501-43"
                                                 email="rayanne.amuhhemuhun@gmail.com"
@@ -150,7 +150,7 @@ export default class TableClients extends Component{
                                 </table>
                             </div>
                         </div>
-                        <NavPage
+                        <ScrollPage
                            numPageBack=""
                            numPageCurrent="1"
                            numPageNext="2"

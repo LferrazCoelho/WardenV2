@@ -1,42 +1,42 @@
 import React, { Component, Fragment } from 'react'
-import Card from '../../../componets/Card'
+import CardResume from '../../../componets/CardResume'
 
 export default class ResumeOrders extends Component{
     render() {
         return (
             <Fragment>
                 <div className="row mr-0 ml-0 mt-4">
-                    <Card
+                    <CardResume
                         title="Valor Total"
-                        textColor="info"
+                        textColor="danger"
                         status="Com Juros"
                         value="R$ 13.753.504,53"
-                        sizeCard="col-xl-3"
-                        sizeResult="h4"
+                        sizeCard="col-xl-auto"
+                        sizeResult="h3"
                     />
-                    <Card
+                    <CardResume
                         title="Valor Total"
-                        textColor="primary"
+                        textColor="danger"
                         status="Sem Juros"
-                        value="R$ 13.753.504,53"
-                        sizeCard="col-xl-3"
-                        sizeResult="h4"
+                        value="R$ 11.555.547,53"
+                        sizeCard="col-xl-auto"
+                        sizeResult="h3"
                     />
-                    <Card
+                    <CardResume
                         title="Valor Total"
-                        textColor="info"
+                        textColor="danger"
                         status="Liquido"
-                        value="R$ 13.753.504,53"
-                        sizeCard="col-xl-3"
-                        sizeResult="h4"
+                        value="R$ 13.090.392,53"
+                        sizeCard="col-xl-auto"
+                        sizeResult="h3"
                     />
-                    <Card
+                    <CardResume
                         title="Valor Total"
-                        textColor="primary"
+                        textColor="danger"
                         status="Boletos"
-                        value="R$ 13.753.504,53"
-                        sizeCard="col-xl-3"
-                        sizeResult="h4"
+                        value="R$ 11.421.801,53"
+                        sizeCard="col-xl-auto"
+                        sizeResult="h3"
                     />
                 </div>
             </Fragment>

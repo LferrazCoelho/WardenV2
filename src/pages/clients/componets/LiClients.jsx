@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-export default class ClientsLi extends Component{
+export default class LiClients extends Component{
     render() {
         return (
             <Fragment>

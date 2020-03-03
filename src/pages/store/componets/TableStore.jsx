@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import StoreLi from './StoreLi'
+import LiStore from './LiStore'
 import Terminal from './Terminal'
-import NavPage from '../../../componets/NavPage'
+import ScrollPage from '../../../componets/ScrollPage'
+import CardHead from '../../../componets/CardHead'
 
 export default class TableStore extends Component{
     render() {
@@ -10,9 +11,9 @@ export default class TableStore extends Component{
                 <div className="row mr-0 ml-0 mt-4">
                     <div className="col">
                         <div className="card shadow">
-                            <div className="card-header bg-transparent border-0">
-                                <h3 className="mb-0">Estabelecimentos Zapay</h3>
-                            </div>
+                            <CardHead
+                             title="Resultado da Busca"
+                             />
                             <div className="table-responsive">
                                 <table className="table align-items-center table-flush">
                                     <thead className="thead-light">
@@ -26,7 +27,7 @@ export default class TableStore extends Component{
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="Vapt Vupt - Praça da Biblia"
                                                 uf="GO"
                                                 terminalAmount="1"
@@ -39,7 +40,7 @@ export default class TableStore extends Component{
                                             </td>
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="Vapt Vupt - Buriti Shopping"
                                                 uf="GO"
                                                 terminalAmount="2"
@@ -47,7 +48,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - Shopping Popular"
                                                 uf="DF"
                                                 terminalAmount="2"
@@ -55,7 +56,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - Paranoá"
                                                 uf="DF"
                                                 terminalAmount="1"
@@ -63,7 +64,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - AutoShopping"
                                                 uf="SP"
                                                 terminalAmount="1"
@@ -71,7 +72,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - Shopping Aricanduva"
                                                 uf="SP"
                                                 terminalAmount="2"
@@ -79,7 +80,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="Vapt Vupt - Praça da Biblia"
                                                 uf="GO"
                                                 terminalAmount="4"
@@ -87,7 +88,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="Vapt Vupt - Buriti Shopping"
                                                 uf="GO"
                                                 terminalAmount="2"
@@ -95,7 +96,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - Shopping Popular"
                                                 uf="DF"
                                                 terminalAmount="2"
@@ -103,7 +104,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - Paranoá"
                                                 uf="DF"
                                                 terminalAmount="1"
@@ -111,7 +112,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - AutoShopping"
                                                 uf="SP"
                                                 terminalAmount="2"
@@ -119,7 +120,7 @@ export default class TableStore extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <StoreLi 
+                                            <LiStore 
                                                 store="DETRAN - Shopping Aricanduva"
                                                 uf="SP"
                                                 terminalAmount="1"
@@ -130,7 +131,7 @@ export default class TableStore extends Component{
                                 </table>
                             </div>
                         </div>
-                        <NavPage
+                        <ScrollPage
                            numPageBack=""
                            numPageCurrent="1"
                            numPageNext="2"

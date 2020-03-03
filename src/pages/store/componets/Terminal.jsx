@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import TerminalLi from './TerminalLi'
+import LiTerminal from './LiTerminal'
 
 export default class Terminal extends Component {
     render() {
@@ -21,7 +21,7 @@ export default class Terminal extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <TerminalLi
+                            <LiTerminal
                                 create_date="31/01/2020"
                                 user="024.345.123-91"
                                 id="SW000010"
@@ -29,7 +29,7 @@ export default class Terminal extends Component {
                                 pinpad="17D9CE5416D8CE53"
                                 status="0"
                             />
-                            <TerminalLi
+                            <LiTerminal
                                 create_date="28/01/2020"
                                 user="024.345.123-91"
                                 id="SW000009"

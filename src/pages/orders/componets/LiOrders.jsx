@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-export default class OrdersLi extends Component{
+export default class LiOrders extends Component{
     render() {
         return (
             <Fragment>

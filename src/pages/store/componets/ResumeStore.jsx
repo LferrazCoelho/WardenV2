@@ -1,33 +1,33 @@
 import React, { Component, Fragment } from 'react'
-import Card from '../../../componets/Card'
+import CardResume from '../../../componets/CardResume'
 
 export default class ResumeStore extends Component{
     render() {
         return (
             <Fragment>
                 <div className="row mr-0 ml-0 mt-4">
-                        <Card
+                        <CardResume
                             title="Estabelecimentos"
-                            textColor="primary"
+                            textColor="danger"
                             status="Total"
                             value="11"
-                            sizeCard="col-xl-4"
+                            sizeCard="col-xl-auto"
                             sizeResult="h2"
                         />
-                        <Card
+                        <CardResume
                             title="Estabelecimentos"
-                            textColor="success"
+                            textColor="danger"
                             status="Ativados"
                             value="5"
-                            sizeCard="col-xl-4"
+                            sizeCard="col-xl-auto"
                             sizeResult="h2"
                         />
-                        <Card
+                        <CardResume
                             title="Estabelecimentos"
-                            textColor="warning"
+                            textColor="danger"
                             status="Desativados"
                             value="6"
-                            sizeCard="col-xl-4"
+                            sizeCard="col-xl-auto"
                             sizeResult="h2"
                         />
                 </div>

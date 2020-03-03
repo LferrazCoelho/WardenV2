@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import Status from './Status'
+import Status from '../../../componets/Status'
 
-export default class TerminalLi extends Component{
+export default class LiTerminal extends Component{
     render() {
         return (
             <Fragment>

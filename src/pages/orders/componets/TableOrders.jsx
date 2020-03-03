@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import OrdersLi from './OrdersLi'
-import NavPage from '../../../componets/NavPage'
+import LiOrders from './LiOrders'
+import CardHead from '../../../componets/CardHead'
+import ScrollPage from '../../../componets/ScrollPage'
 
 export default class TableOrders extends Component{
     render() {
@@ -9,9 +10,9 @@ export default class TableOrders extends Component{
                 <div className="row mr-0 ml-0 mt-4">
                     <div className="col">
                         <div className="card shadow">
-                            <div className="card-header bg-transparent border-0">
-                                <h3 className="mb-0">Estabelecimentos Zapay</h3>
-                            </div>
+                            <CardHead
+                                title="Resultado da Busca"
+                            />
                             <div className="table-responsive">
                                 <table className="table align-items-center table-flush">
                                     <thead className="thead-light">
@@ -31,7 +32,7 @@ export default class TableOrders extends Component{
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <OrdersLi 
+                                            <LiOrders 
                                                 date="22/01/2020"
                                                 protocol="dcg73gew"
                                                 place="JHG9876"
@@ -46,7 +47,7 @@ export default class TableOrders extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <OrdersLi 
+                                            <LiOrders 
                                                 date="22/01/2020"
                                                 protocol="dcg73gew"
                                                 place="JHG9876"
@@ -61,7 +62,7 @@ export default class TableOrders extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <OrdersLi 
+                                            <LiOrders 
                                                 date="22/01/2020"
                                                 protocol="dcg73gew"
                                                 place="JHG9876"
@@ -76,7 +77,7 @@ export default class TableOrders extends Component{
                                             />
                                         </tr>
                                         <tr>
-                                            <OrdersLi 
+                                            <LiOrders 
                                                 date="22/01/2020"
                                                 protocol="dcg73gew"
                                                 place="JHG9876"
@@ -94,7 +95,7 @@ export default class TableOrders extends Component{
                                 </table>
                             </div>
                         </div>
-                        <NavPage
+                        <ScrollPage
                            numPageBack=""
                            numPageCurrent="1"
                            numPageNext="2"

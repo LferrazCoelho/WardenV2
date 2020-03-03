@@ -4,6 +4,7 @@ import Sidebar from './componets/Sidebar'
 import Store from './pages/store/Store'
 import Orders from './pages/orders/Orders'
 import Clients from './pages/clients/Clients'
+// import Login from './pages/login/Login'
 import './componets/index.css'
 
 export default class App extends Component{
@@ -24,9 +25,9 @@ export default class App extends Component{
                 <Clients />
               </Route>
 
-              <Route path="/login">
-                <Clients />
-              </Route>
+              {/* <Route path="/login">
+                <Login />
+              </Route> */}
 
               <Route path="/">
                 <Orders />

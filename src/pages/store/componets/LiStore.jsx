@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import Status from './Status'
+import Status from '../../../componets/Status'
+import ButtonIcon from '../../../componets/ButtonIcon'
 
-export default class StoreLi extends Component{
+export default class LiStore extends Component{
     render() {
         return (
             <Fragment>
@@ -21,12 +22,12 @@ export default class StoreLi extends Component{
                 </td>
                 <td>
                     <div className="d-flex align-items-center">
-                        <button className="btn btn-icon btn-sm btn-danger" type="button">
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-settings-gear-65"></i>
-                            </span>
-                            <span className="btn-inner--text">Editar</span>
-                        </button>
+                        <ButtonIcon
+                            size="btn-sm"
+                            color="danger"
+                            icon="settings-gear-65"
+                            title="Editar"
+                        />
                     </div>
                 </td>
             </Fragment>

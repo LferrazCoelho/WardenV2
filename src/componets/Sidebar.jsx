@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import SidebarLi from './SidebarLi'
+import LiSidebar from './LiSidebar'
 
 export default class Sidebar extends Component{
     render() {
@@ -12,54 +12,24 @@ export default class Sidebar extends Component{
                         </a>
                         <div className="collapse navbar-collapse" id="sidebar">
                             <ul className="navbar-nav">
-                                <SidebarLi
+                                <LiSidebar
                                     link="/"
                                     title="Pedidos"
                                     icon="books"
                                     iconColor="danger"
-                                    />
-                                <SidebarLi
+                                />
+                                <LiSidebar
                                     link="/store"
                                     title="Estabelecimentos"
                                     icon="shop"
                                     iconColor="danger"
-                                    />
-                                <SidebarLi
+                                />
+                                <LiSidebar
                                     link="/client"
                                     title="Clientes"
                                     icon="single-02"
                                     iconColor="danger"
-                                    />
-                                    {/* <SidebarLi
-                                        link="/"
-                                        title="Pagamentos"
-                                        icon="credit-card"
-                                        iconColor="danger"
-                                    /> */}
-                                    {/* <SidebarLi
-                                        link="/"
-                                        title="Relatório"
-                                        icon="bullet-list-67"
-                                        iconColor="danger"
-                                    /> */}
-                                {/* <SidebarLi
-                                    link="/"
-                                    title="Tickets Promocionais"
-                                    icon="money-coins"
-                                    iconColor="danger"
                                 />
-                                <SidebarLi
-                                    link="/"
-                                    title="Boletos"
-                                    icon="map-big"
-                                    iconColor="danger"
-                                />
-                                <SidebarLi
-                                    link="/"
-                                    title="Blacklist"
-                                    icon="user-run"
-                                    iconColor="danger"
-                                /> */}
                             </ul>
                         </div>
                     </div>

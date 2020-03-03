@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-export default class Card extends Component{
+export default class CardResume extends Component{
     render() {
         return(
             <Fragment>
