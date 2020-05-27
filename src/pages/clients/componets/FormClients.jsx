@@ -14,10 +14,12 @@ export default class FormClients extends Component{
                         <div className="card shadow">
                             <form className="pr-3 pl-3 pt-1 pb-1">
                                 <div className="row">
-                                    <CardHead
-                                        title="Busca"
-                                    />
-                                    <div className="col-12 mb-2 d-flex">
+                                    <div className="col-md-12">
+                                        <CardHead
+                                            title="Busca"
+                                        />
+                                    </div>
+                                    <div className="col-md-6 mb-2">
                                         <Input
                                             type="text"
                                             id="date-init"
@@ -38,8 +40,6 @@ export default class FormClients extends Component{
                                             id="cpf"
                                             placeholder="Documento"
                                         />
-                                    </div>
-                                    <div className="col-12 mb-2 d-flex">
                                         <Input
                                             type="text"
                                             id="email"

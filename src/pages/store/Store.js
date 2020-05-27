@@ -10,10 +10,10 @@ export default class Store extends Component{
             <Fragment>
                 <Head
                     bgHead="bgHeadStore"
-                    titlepage="Estabelecimentos"
-                    userName="Kairon Velozo"
-                    avatar="https://ca.slack-edge.com/T5Z5RFR3M-U9HN1FPD1-8810ea9bfd6d-512"
+                    titlePage="Estabelecimentos"
                     ResumePage={<ResumeStore />}
+                    userName={this.props.userName}
+                    avatar={this.props.avatar}
                 />
                 <div className="container-fluid mt--8">
                     <FormStore />

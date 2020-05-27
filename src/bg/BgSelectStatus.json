@@ -1,0 +1,24 @@
+[
+    { "status": "UNCLASSIFIED"
+    },
+    { "status": "SEARCH"
+    },
+    { "status": "VEHICLE_NOT_FOUND"
+    },
+    { "status": "VEHICLE_UNAVAILABLE"
+    },
+    { "status": "SIMULATION"
+    },
+    { "status": "PENDING"
+    },
+    { "status": "PAYMENT_SUCCESS"
+    },
+    { "status": "CHEKOUT_FAIL"
+    },
+    { "status": "DETRAN_REJECTED"
+    },
+    { "status": "CANCELLED"
+    },
+    { "status": "CHARGEBACK"
+    }
+]

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import LiClients from './LiClients'
+import BgClients from '../../../bg/BgClients.json'
 import ScrollPage from '../../../componets/ScrollPage'
 
 export default class TableClients extends Component{
@@ -26,126 +26,23 @@ export default class TableClients extends Component{
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="danger"
-                                                statusOrders="Recusado"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="success"
-                                                statusOrders="Sucesso"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="success"
-                                                statusOrders="Sucesso"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="danger"
-                                                statusOrders="Recusado"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="success"
-                                                statusOrders="Sucesso"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="primary"
-                                                statusOrders="Pendente"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="info"
-                                                statusOrders="Simulação"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="primary"
-                                                statusOrders="Pendente"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="info"
-                                                statusOrders="Simulação"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiClients 
-                                                date="18/02/2020"
-                                                document="034.114.501-43"
-                                                email="rayanne.amuhhemuhun@gmail.com"
-                                                phone="(61)98158-3263"
-                                                place="FNX8672"
-                                                renavam="10432267775"
-                                                statusColor="success"
-                                                statusOrders="Sucesso"
-                                            />
-                                        </tr>
+                                        {BgClients.map(function(client) {
+                                            return(
+                                                <tr key={client.id}>
+                                                    <td>{ new Date( client.created_at ).toLocaleString('pt-BR') }</td>
+                                                    <td>{client.document}</td>
+                                                    <td>{client.email}</td>
+                                                    <td>{client.phone}</td>
+                                                    <td>{client.license_plate}</td>
+                                                    <td>{client.renavam}</td>
+                                                    <td>
+                                                        <div>
+                                                            <span class={`badge badge-${"success"}`}>{client.last_payment_status}</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        })}
                                     </tbody>
                                 </table>
                             </div>

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import LiOrders from './LiOrders'
+import bgOrders from '../../../bg/BgOrders.json'
 import CardHead from '../../../componets/CardHead'
 import ScrollPage from '../../../componets/ScrollPage'
 
@@ -28,69 +28,36 @@ export default class TableOrders extends Component{
                                             <th scope="col">Valor Liquido</th>
                                             <th scope="col">Cupom</th>
                                             <th scope="col">Desconto</th>
+                                            <th scope="col">Valor c/ Desconto</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Prioridade</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <LiOrders 
-                                                date="22/01/2020"
-                                                protocol="dcg73gew"
-                                                place="JHG9876"
-                                                uf="GO"
-                                                orig="Seller"
-                                                valuerS="R$ 204,45"
-                                                valuerC="R$ 231,45"
-                                                boleto="R$ 204,45"
-                                                liquid="R$ 224,45"
-                                                cupom="sem cupom"
-                                                off="0%"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiOrders 
-                                                date="22/01/2020"
-                                                protocol="dcg73gew"
-                                                place="JHG9876"
-                                                uf="GO"
-                                                orig="Seller"
-                                                valuerS="R$ 204,45"
-                                                valuerC="R$ 231,45"
-                                                boleto="R$ 204,45"
-                                                liquid="R$ 224,45"
-                                                cupom="sem cupom"
-                                                off="0%"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiOrders 
-                                                date="22/01/2020"
-                                                protocol="dcg73gew"
-                                                place="JHG9876"
-                                                uf="GO"
-                                                orig="Seller"
-                                                valuerS="R$ 204,45"
-                                                valuerC="R$ 231,45"
-                                                boleto="R$ 204,45"
-                                                liquid="R$ 224,45"
-                                                cupom="sem cupom"
-                                                off="0%"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiOrders 
-                                                date="22/01/2020"
-                                                protocol="dcg73gew"
-                                                place="JHG9876"
-                                                uf="GO"
-                                                orig="Seller"
-                                                valuerS="R$ 204,45"
-                                                valuerC="R$ 231,45"
-                                                boleto="R$ 204,45"
-                                                liquid="R$ 224,45"
-                                                cupom="sem cupom"
-                                                off="0%"
-                                            />
-                                        </tr>
+                                        {bgOrders.map(function(orders) {
+                                            return(
+                                                <tr key={orders.id}>
+                                                    <td>{ new Date( orders.created_at ).toLocaleString('pt-BR') }</td>
+                                                    <td>{orders.protocol}</td>
+                                                    <td>{orders.place}</td>
+                                                    <td>{orders.state}</td>
+                                                    <td>{orders.origin}</td>
+                                                    <td>{ new Number( orders.total_amount ).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }</td>
+                                                    <td>{ new Number( orders.base_amount ).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }</td>
+                                                    <td>{ new Number( orders.bill_amount ).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }</td>
+                                                    <td>{ new Number( orders.net_amount ).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }</td>
+                                                    <td>{orders.promotional_ticket}</td>
+                                                    <td>{orders.promotional_ticket_discount}</td>
+                                                    <td>{ new Number( orders.promotional_ticket_amount ).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) }</td>
+                                                    <td>{orders.status}</td>
+                                                    <td>
+                                                        <div className="row justify-content-md-center">
+                                                            <input type="checkbox" aria-label="Chebox para permitir input text" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        })}
                                     </tbody>
                                 </table>
                             </div>

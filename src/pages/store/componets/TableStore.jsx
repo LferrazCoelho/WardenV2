@@ -1,8 +1,11 @@
 import React, { Component, Fragment } from 'react'
-import LiStore from './LiStore'
-import Terminal from './Terminal'
-import ScrollPage from '../../../componets/ScrollPage'
+import BgStore from '../../../bg/BgStore.json'
 import CardHead from '../../../componets/CardHead'
+import Status from '../../../componets/Status'
+import ButtonIconCollapse from '../../../componets/ButtonIconCollapse'
+import IconButton from '../../../componets/IconButton'
+import ScrollPage from '../../../componets/ScrollPage'
+import Terminal from './Terminal'
 
 export default class TableStore extends Component{
     render() {
@@ -26,107 +29,44 @@ export default class TableStore extends Component{
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <LiStore 
-                                                store="Vapt Vupt - Praça da Biblia"
-                                                uf="GO"
-                                                terminalAmount="1"
-                                                status="0"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <td className="pt-0 pb-3 pr-0 pl-0" colspan="5">
-                                                <Terminal />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="Vapt Vupt - Buriti Shopping"
-                                                uf="GO"
-                                                terminalAmount="2"
-                                                status="2"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - Shopping Popular"
-                                                uf="DF"
-                                                terminalAmount="2"
-                                                status="0"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - Paranoá"
-                                                uf="DF"
-                                                terminalAmount="1"
-                                                status="4"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - AutoShopping"
-                                                uf="SP"
-                                                terminalAmount="1"
-                                                status="1"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - Shopping Aricanduva"
-                                                uf="SP"
-                                                terminalAmount="2"
-                                                status="0"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="Vapt Vupt - Praça da Biblia"
-                                                uf="GO"
-                                                terminalAmount="4"
-                                                status="0"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="Vapt Vupt - Buriti Shopping"
-                                                uf="GO"
-                                                terminalAmount="2"
-                                                status="2"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - Shopping Popular"
-                                                uf="DF"
-                                                terminalAmount="2"
-                                                status="0"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - Paranoá"
-                                                uf="DF"
-                                                terminalAmount="1"
-                                                status="4"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - AutoShopping"
-                                                uf="SP"
-                                                terminalAmount="2"
-                                                status="1"
-                                            />
-                                        </tr>
-                                        <tr>
-                                            <LiStore 
-                                                store="DETRAN - Shopping Aricanduva"
-                                                uf="SP"
-                                                terminalAmount="1"
-                                                status="0"
-                                            />
-                                        </tr>
+                                        {BgStore.map(function(store, index) {
+                                            return(
+                                                <Fragment>
+                                                    <tr key={store.id}>
+                                                        <td>{store.store}</td>
+                                                        <td>{store.state}</td>
+                                                        <td>{store.terminal_amount}</td>
+                                                        <td>
+                                                            <div>
+                                                                <Status status={store.terminal_status} />
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div className="d-flex align-items-center">
+                                                                <ButtonIconCollapse
+                                                                    size="btn-sm"
+                                                                    color="danger"
+                                                                    icon="laptop"
+                                                                    title="Terminal"
+                                                                    idCollapse={`collapsetext${index}`}
+                                                                />
+                                                                <IconButton
+                                                                    size="btn-sm"
+                                                                    color="danger"
+                                                                    icon="settings-gear-65"
+                                                                />
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <Terminal
+                                                            terminals={store.terminals}
+                                                            idTermCollapse={`collapsetext${index}`}
+                                                        />
+                                                    </tr>
+                                                </Fragment>
+                                            )
+                                        })}
                                     </tbody>
                                 </table>
                             </div>

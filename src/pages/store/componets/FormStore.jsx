@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react'
+import BgSelectState from '../../../bg/BgSelectState.json'
+import BgSelectStore from '../../../bg/BgSelectStore.json'
 import CardHead from '../../../componets/CardHead'
 import Input from '../../../componets/Input'
 import Select from '../../../componets/Select'
@@ -14,18 +16,24 @@ export default class FormStore extends Component{
                         <div className="card shadow">
                             <form className="pr-3 pl-3 pt-1 pb-1">
                                 <div className="row">
-                                    <CardHead
-                                        title="Busca"
-                                    />
-                                    <div className="col-12 mb-2 d-flex">
+                                    <div className="col-md-12">
+                                        <CardHead
+                                            title="Busca"
+                                        />
+                                    </div>
+                                    <div className="col-md-6 mb-2">
                                         <Select
+                                            bgOption={ BgSelectStore }
                                             id="select-store"
-                                            option={<Option value="Estabelecimentos" />}
-                                        />  
+                                            titleSelect="Parceiro"
+                                            childBg="store"
+                                        />   
                                         <Select
+                                            bgOption={ BgSelectState }
                                             id="select-uf"
-                                            option={<Option value="UF" />}
-                                        /> 
+                                            titleSelect="UF"
+                                            childBg="state"
+                                        />   
                                         <Input
                                             type="text"
                                             id="terminal"
@@ -44,30 +52,13 @@ export default class FormStore extends Component{
                                                 color="danger"
                                                 icon="send"
                                                 title="Pesquisar"
-                                            />
+                                                />
                                             <ButtonIcon
                                                 size="btn-sm"
                                                 color="danger"
                                                 icon="curved-next"
                                                 title="Limpar"
-                                            />
-                                                <a className="h6" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                                    Expandir Valor agregado
-                                                </a>
-                                                <div className="row collapse" id="collapseExample">
-                                                    <div className="col">
-                                                        <span className="h6 surtitle">Titulo</span>
-                                                        <span className="d-block h4">Valor</span>
-                                                    </div>
-                                                    <div className="col">
-                                                        <span className="h6 surtitle">Titulo 2</span>
-                                                        <span className="d-block h4">Valor 2</span>
-                                                    </div>
-                                                    <div className="col">
-                                                        <span className="h6 surtitle">Titulo 2</span>
-                                                        <span className="d-block h4">Valor 2</span>
-                                                    </div>
-                                                </div>
+                                                />
                                         </div>
                                     </div>
                                 </div>

@@ -10,10 +10,10 @@ export default class Clients extends Component{
             <Fragment>
                 <Head
                     bgHead="bgHeadClients"
-                    titlepage="Clientes"
-                    userName="Kairon Velozo"
-                    avatar="https://ca.slack-edge.com/T5Z5RFR3M-U9HN1FPD1-8810ea9bfd6d-512"
+                    titlePage="Clientes"
                     ResumePage={<ResumeClients />}
+                    userName={this.props.userName}
+                    avatar={this.props.avatar}
                 />
                 <div className="container-fluid mt--8">
                     <FormClients />

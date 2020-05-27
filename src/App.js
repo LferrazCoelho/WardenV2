@@ -9,20 +9,33 @@ import './componets/index.css'
 
 export default class App extends Component{
   render() {
+
+    const userName = "Kairon Velozo"
+    const avatar = "https://ca.slack-edge.com/T5Z5RFR3M-U9HN1FPD1-8810ea9bfd6d-48"
+
     return (
       <Router>
         <Fragment>
-
-          <Sidebar />
+          
+          <Sidebar
+            avatar= {avatar}
+          />
 
           <div className="main-content">
             <Switch>
+
               <Route path="/store">
-                <Store />
+                <Store
+                  userName= {userName}
+                  avatar= {avatar}
+                />
               </Route>
 
               <Route path="/client">
-                <Clients />
+                <Clients
+                  userName= {userName}
+                  avatar= {avatar}
+                />
               </Route>
 
               {/* <Route path="/login">
@@ -30,8 +43,12 @@ export default class App extends Component{
               </Route> */}
 
               <Route path="/">
-                <Orders />
+                <Orders 
+                  userName= {userName}
+                  avatar= {avatar}
+                />
               </Route>
+
             </Switch>
           </div>
 

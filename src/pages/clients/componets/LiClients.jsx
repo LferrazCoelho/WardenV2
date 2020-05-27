@@ -4,9 +4,9 @@ export default class LiClients extends Component{
     render() {
         return (
             <Fragment>
-                <th scope="row">
+                <td scope="row">
                     <div>{this.props.date}</div>
-                </th>
+                </td>
                 <td>
                     <div>{this.props.document}</div>
                 </td>

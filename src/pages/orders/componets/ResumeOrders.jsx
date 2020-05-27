@@ -1,40 +1,41 @@
 import React, { Component, Fragment } from 'react'
-import CardResume from '../../../componets/CardResume'
+import BgAmount from '../../../bg/BgAmount.json'
+import CardResumeMoney from '../../../componets/CardResumeMoney'
 
 export default class ResumeOrders extends Component{
     render() {
         return (
             <Fragment>
                 <div className="row mr-0 ml-0 mt-4">
-                    <CardResume
+                    <CardResumeMoney
                         title="Valor Total"
                         textColor="danger"
                         status="Com Juros"
-                        value="R$ 13.753.504,53"
+                        value={BgAmount.total_total_amount}
                         sizeCard="col-xl-auto"
                         sizeResult="h3"
                     />
-                    <CardResume
+                    <CardResumeMoney
                         title="Valor Total"
                         textColor="danger"
                         status="Sem Juros"
-                        value="R$ 11.555.547,53"
+                        value={BgAmount.total_base_amount}
                         sizeCard="col-xl-auto"
                         sizeResult="h3"
                     />
-                    <CardResume
+                    <CardResumeMoney
                         title="Valor Total"
                         textColor="danger"
                         status="Liquido"
-                        value="R$ 13.090.392,53"
+                        value={BgAmount.total_net_amount}
                         sizeCard="col-xl-auto"
                         sizeResult="h3"
                     />
-                    <CardResume
+                    <CardResumeMoney
                         title="Valor Total"
                         textColor="danger"
                         status="Boletos"
-                        value="R$ 11.421.801,53"
+                        value={BgAmount.total_bills_amount}
                         sizeCard="col-xl-auto"
                         sizeResult="h3"
                     />

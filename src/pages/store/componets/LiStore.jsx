@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import Status from '../../../componets/Status'
-import ButtonIcon from '../../../componets/ButtonIcon'
+import ButtonIconCollapse from '../../../componets/ButtonIconCollapse'
+import IconButton from '../../../componets/IconButton'
 
 export default class LiStore extends Component{
     render() {
         return (
             <Fragment>
-                <th scope="row">
+                <th>
                     <div className="media align-items-center">{this.props.store}</div>
                 </th>
                 <td>
@@ -16,17 +17,21 @@ export default class LiStore extends Component{
                     <div>{this.props.terminalAmount}</div>
                 </td>
                 <td>
-                    <div className="avatar-group">
-                        <Status status={this.props.status}/>
-                    </div>
+                    <div><Status status={this.props.status} /></div>
                 </td>
                 <td>
                     <div className="d-flex align-items-center">
-                        <ButtonIcon
+                        <ButtonIconCollapse
+                            size="btn-sm"
+                            color="danger"
+                            icon="laptop"
+                            title="Terminal"
+                            idCollapse={this.props.idLiCollapse}
+                        />
+                        <IconButton
                             size="btn-sm"
                             color="danger"
                             icon="settings-gear-65"
-                            title="Editar"
                         />
                     </div>
                 </td>

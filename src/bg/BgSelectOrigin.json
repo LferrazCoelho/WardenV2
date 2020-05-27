@@ -1,0 +1,16 @@
+[
+    { "origin": "BILLER"
+    },
+    { "origin": "DETRAN"
+    },
+    { "origin": "SELLER_DESKTOP"
+    },
+    { "origin": "SELLER_MOBILE"
+    },
+    { "origin": "SELLER_OPV"
+    },
+    { "origin": "SELLER_SMS"
+    },
+    { "origin": "ZAPI"
+    }
+]
